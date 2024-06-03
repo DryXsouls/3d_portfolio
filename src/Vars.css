@@ -1,0 +1,18 @@
+:root{
+
+    /*  Colours */
+    --color-primary: #ffff;
+    --color-seconday: #0096c7;
+
+    --color-title: #111f;
+    --color-subtitle: #0096c7;
+    --color-text: #ffff;
+    --color-text-dark: #111f;
+
+    --color-bg: #ffff;
+    --color-bg-dark: #111f;
+
+    /* Fonts */
+    --font-primary: "Arial";
+
+}

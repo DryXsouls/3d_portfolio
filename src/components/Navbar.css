@@ -1,0 +1,108 @@
+@import "../Vars.css";
+.fa-times {
+    font-size: 2rem;
+    color: var(--color-primary);
+}
+.fa-bars{
+    color: var(--color-primary);
+    font-size: 2rem;
+}
+
+
+@media screen and (max-width: 1990px) { /*430*/
+    .NavbarItems{
+        position: relative;
+    }
+    .navbar {
+        top: 0;
+        width: 100%;
+        height: 4rem;
+        display: flex;
+        background-color: var(--color-bg);
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        object-fit: contain;
+        padding: 0 1.5rem 0 1.5rem;
+        z-index: 999;
+    }
+    .navbar-container{
+        width: 90vw;
+        height: 3rem;
+        display: flex;
+        gap: clamp(1rem,5vw,3rem);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .navbar-logo{
+        cursor: pointer;
+        color: var(--color-title);
+        text-decoration: none;
+        white-space: nowrap;
+    }
+    .navbar-logo:hover{
+        color: var(--color-seconday);
+        transition: all 0.2s ease-out;
+
+    }
+    .menu-icon{
+        display: flex;
+        width: 32px;
+        height: 32px;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background-color: var(--color-title);
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .menu-icon:hover{
+        background-color: var(--color-seconday);
+        transition: all 0.2s ease-out;
+    }
+    .menu-icon.active{
+        background-color: var(--color-seconday);
+    }
+    .menu-icon.active:hover{
+        background-color:  var(--color-title);
+    }
+
+    .nav-menu{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        left: -100%;
+        position: absolute;
+        transition: all 0.5s ease;
+        top: 3rem;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 1rem 0;
+        z-index: 998;
+    }
+    .nav-menu.active{
+        background-color: #282c34;
+        left:0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+    .nav-item{
+        height: 3rem;
+        width: 100%;
+    }
+    .nav-link{
+        height: 100%;
+        text-decoration: none;
+        padding: 0.25rem 1rem 0.3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--color-primary);
+    }
+    .nav-link:hover{
+        background-color: var(--color-seconday);
+    }
+}
