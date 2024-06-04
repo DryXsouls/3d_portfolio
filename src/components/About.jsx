@@ -19,7 +19,7 @@ function About(){
                             I’m friendly person who thrives to finish project with his team in best state possible.</p>
                     </div>
                 </div>
-                <div className='relative w-6/7 h-half -top-60 -right-56 overflow-hidden'>
+                <div className='relative w-6/7 h-half -top-60 -right-80 overflow-hidden'>
                     <HobbyMesh/>
                 </div>
             </div>
