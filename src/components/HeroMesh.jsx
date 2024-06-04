@@ -1,5 +1,5 @@
 import {Canvas} from '@react-three/fiber'
-import {useState, Suspense} from "react";
+import {useState, Suspense, useEffect} from "react";
 import Loader from "./Loader.jsx";
 import NissanGTR from "./models/NissanGTR.jsx";
 
@@ -9,7 +9,7 @@ const HeroMesh = () => {
     const adjustMeshForScreenSize = () => {
         let screenScale = null;
         let screenPosition = [0,-6.5,-43];
-        let rotation = [0.25,4.7,0]
+        let rotation = [0.25,5.8,0]
 
         if(window.innerWidth <768){
             screenScale = [0.9, 0.9, 0.9];
