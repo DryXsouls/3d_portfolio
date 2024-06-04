@@ -4,8 +4,8 @@ import HobbyMesh from "./HobbyMesh.jsx";
 
 function About(){
     return(
-        <section className='p-20 w-screen h-screen'>
-            <div className='bg-red-400 overflow-hidden'>
+        <section className='p-20 w-full h-screen'>
+            <div className='bg-red-400 overflow-hidden w-full'>
                 <div className='flex'>
                     <figure className='w-2/4 h-1/4 z-10 w-screen h-px drop-shadow'>
                         <HeroMesh/>
@@ -19,7 +19,7 @@ function About(){
                             I’m friendly person who thrives to finish project with his team in best state possible.</p>
                     </div>
                 </div>
-                <div className='relative w-6/7 h-half -top-60 -right-80 overflow-hidden'>
+                <div className='relative w-6/7 h-half -top-60 -right-56 overflow-hidden'>
                     <HobbyMesh/>
                 </div>
             </div>
