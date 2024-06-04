@@ -23,11 +23,11 @@ function Hero(){
                         </Link>
 
 
-                        <div className='absolute w-96 top-20 z-40'>
+                        <div className='absolute w-4/5 top-20 z-40'>
                             <HeroSkillMesh/>
                         </div>
                     </div>
-                    <div className='w-2/4 h-1/4 z-10 w-screen drop-shadow' >
+                    <div className='w-2/4 h-1/4 z-10 drop-shadow' >
                         <HeroMesh className='drop-shadow'/>
                     </div>
                 </div>
