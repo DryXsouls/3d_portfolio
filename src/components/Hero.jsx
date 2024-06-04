@@ -1,15 +1,12 @@
 import React from "react";
-//import './Hero.css';
-//import Shelf3D from "./Shelf3D";
 import {Link} from "react-router-dom";
 import HeroMesh from "./HeroMesh.jsx";
 import HeroSkillMesh from "./HeroSkillMesh.jsx";
 
 function Hero(){
     return(
-        <div className='hero'>
-            <div className='p-20'>
-                <div className='flex justify-evenly content-evenly bg-white-500'>
+        <section className='p-20 w-screen h-screen'>
+                <div className='flex justify-evenly content-evenly bg-white-500 overflow-hidden'>
                     <div className='flex-col w-2/4 h-2/4 pt-20 content-evenly space-y-3 space-x-1 relative'>
                         <h1 className='text-5xl font-black whitespace-nowrap pb-5'>Front-end React Developer</h1>
                         <p className='text-2xl'>Hello there traveler I'm Matúš Vytykáč aspiring Front-end developer from Slovakia.</p>
@@ -31,8 +28,7 @@ function Hero(){
                         <HeroMesh className='drop-shadow'/>
                     </div>
                 </div>
-            </div>
-        </div>
+        </section>
     );
 }
 export default Hero;
