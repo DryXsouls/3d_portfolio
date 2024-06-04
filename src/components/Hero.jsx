@@ -16,10 +16,10 @@ function Hero(){
                         <p className='text-2xl'>I also dabble in 3D designs sorcery</p>
 
                         <Link to='https://www.linkedin.com/in/mat%C3%BA%C5%A1-vytyk%C3%A1%C4%8D-03b001212/'>
-                        <i className='fa fa-linkedin-square'/>
+                        <i className='fa fa-linkedin-square text-2xl'/>
                         </Link>
                         <Link to='https://www.linkedin.com/in/mat%C3%BA%C5%A1-vytyk%C3%A1%C4%8D-03b001212/'>
-                            <i className='fa fa-github-square'/>
+                            <i className='fa fa-github-square text-2xl'/>
                         </Link>
 
 
