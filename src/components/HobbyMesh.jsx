@@ -45,7 +45,7 @@ const HobbyMesh = () => {
     const [hobbyMesh3Scale, hobbyMesh3Position, hobbyMesh3Rotation] = [[0.1,0.1,0.1],[2.0,-0.75,-0.25],[0.25,-0.25,0]];
     const [hobbyMesh4Scale, hobbyMesh4Position, hobbyMesh4Rotation] = [[0.1,0.1,0.1],[2.75,-0.75,-0.25],[0.25,-0.25,0]];  //rot mid -1.5
     return(
-        <section className='w-half h-screen relative'>
+        <section className='w-half h-screen relative '>
             <Canvas className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
                     camera={{near:0.1, far:1000}}
             >
