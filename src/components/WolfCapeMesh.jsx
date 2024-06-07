@@ -9,7 +9,7 @@ import CssMesh from "./models/skills/CssMesh.jsx";
 import JsMesh from "./models/skills/JsMesh.jsx";
 import ReactMesh from "./models/skills/ReactMesh.jsx";
 
-const WolfCapeMesh = () => {
+const WolfCapeMesh = (modelName) => {
     const [isRotating, setIsRotating] = useState(false);
 
     const adjustMeshForScreenSize = () => {
@@ -26,23 +26,19 @@ const WolfCapeMesh = () => {
             screenPosition = [0, -1, -0.5];
         }
         else {
-            screenScale = [0.5,0.5, 0.5];
+            screenScale = [0.75,0.75, 0.75];
             screenPosition = [0,-1,-1.5];
         }
         return [screenScale,screenPosition, rotation];
     }
     const [meshScale, meshPosition, meshRotation] = adjustMeshForScreenSize();
-    const [skillMesh1Scale, skillMesh1Position, skillMesh1Rotation] = [[0.25,0.25,0.25],[-8,-0.45,-1],[0.25,0.25,0]];
-    const [skillMesh2Scale, skillMesh2Position, skillMesh2Rotation] = [[0.5,0.5,0.5],[-10,-0.45,-1],[0.25,0.25,0]];
-    const [skillMesh3Scale, skillMesh3Position, skillMesh3Rotation] = [[0.5,0.5,0.5],[-5,-0.45,-1],[0.25,0.25,0]];
-    const [skillMesh4Scale, skillMesh4Position, skillMesh4Rotation] = [[0.5,0.5,0.5],[-1,-0.45,-1],[0.25,0.25,0]];
-    const [skillMesh5Scale, skillMesh5Position, skillMesh5Rotation] = [[0.5,0.5,0.5],[-0.35,-0.45,0],[0.25,0.25,0]];
-    const [skillMesh6Scale, skillMesh6Position, skillMesh6Rotation] = [[0.5,0.5,0.5],[0.1,-0.45,0],[0.25,0.25,0]];
+    const [skillMesh1Scale, skillMesh1Position, skillMesh1Rotation] = [[0.25,0.25,0.25],[-10,-0.45,-1],[0.25,0.25,0]];
+    const [skillMesh2Scale, skillMesh2Position, skillMesh2Rotation] = [[0.5,0.5,0.5],[-5.5,-0.45,-1],[0.25,0.25,0]];
+    const [skillMesh3Scale, skillMesh3Position, skillMesh3Rotation] = [[0.5,0.5,0.5],[-1,-0.45,-1],[0.25,0.25,0]];
+    const [skillMesh4Scale, skillMesh4Position, skillMesh4Rotation] = [[0.5,0.5,0.5],[3.5,-0.45,-1],[0.25,0.25,0]];
 
-    const [skillGMeshScale, skillGMeshPosition, skillGMeshRotation] = [[0.5,0.5,0.5],[0.75,-0.45,0],[0.25,-0.25,0]];
-    const [skillGMesh2Scale, skillGMesh2Position, skillGMesh2Rotation] = [[0.5,0.5,0.5],[1.2,-0.45,0],[0.25,-0.25,0]];
-    const [skillGMesh3Scale, skillGMesh3Position, skillGMesh3Rotation] = [[0.5,0.5,0.5],[1.65,-0.45,0],[0.25,-0.25,0]];
-    const [skillGMesh4Scale, skillGMesh4Position, skillGMesh4Rotation] = [[0.075,0.075,0.075],[2.1,-0.45,0],[0.25,-0.25,0]];  //rot mid -1.5
+    const [skillGMeshScale, skillGMeshPosition, skillGMeshRotation] = [[0.5,0.5,0.5],[8,-0.45,-1],[0.25,0.25,0]];
+
     return(
         <section className='w-full h-full relative'>
             <Canvas className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
@@ -64,44 +60,37 @@ const WolfCapeMesh = () => {
 
                     <HtmlMesh
                         position={skillMesh1Position}
-                        scale={skillMesh1Scale}
+                        scale={meshScale}
                         rotation={skillMesh1Rotation}
                         isRotating={isRotating}
                         setIsRotating={setIsRotating}
                     />
                     <CssMesh
-                        position={meshPosition}
+                        position={skillMesh2Position}
                         scale={meshScale}
-                        rotation={meshRotation}
+                        rotation={skillMesh2Rotation}
                         isRotating={isRotating}
                         setIsRotating={setIsRotating}
                     />
                     <JsMesh
                         position={skillMesh3Position}
-                        scale={skillMesh3Scale}
+                        scale={meshScale}
                         rotation={skillMesh3Rotation}
                         isRotating={isRotating}
                         setIsRotating={setIsRotating}
                     />
                     <ReactMesh
                         position={skillMesh4Position}
-                        scale={skillMesh4Scale}
+                        scale={meshScale}
                         rotation={skillMesh4Rotation}
                         isRotating={isRotating}
                         setIsRotating={setIsRotating}
                     />
 
-                    <PShop
-                        position={skillGMesh2Position}
-                        scale={skillGMesh2Scale}
-                        rotation={skillGMesh2Rotation}
-                        isRotating={isRotating}
-                        setIsRotating={setIsRotating}
-                    />
                     <AIllustrator
-                        position={skillGMesh3Position}
-                        scale={skillGMesh3Scale}
-                        rotation={skillGMesh3Rotation}
+                        position={skillGMeshPosition}
+                        scale={meshScale}
+                        rotation={skillGMeshRotation}
                         isRotating={isRotating}
                         setIsRotating={setIsRotating}
                     />

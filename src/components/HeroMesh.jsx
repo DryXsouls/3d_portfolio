@@ -27,7 +27,7 @@ const HeroMesh = () => {
     }
     const [meshScale, meshPosition, meshRotation] = adjustMeshForScreenSize();
     return(
-        <section className='w-half h-screen relative'>
+        <section className='w-full h-screen relative'>
             <Canvas className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
                 camera={{near:0.1, far:1000}}
             >

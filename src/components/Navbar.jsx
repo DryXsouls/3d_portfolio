@@ -18,7 +18,7 @@ function Navbar(){
 
 
     return (
-        <nav className='header'>
+        <nav className='header' id='nav'>
             <div className='navbar-container'>
                 <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
                     <h1>Matúš Vytykáč</h1>
@@ -29,19 +29,19 @@ function Navbar(){
                 </div>
                 <ul className={click? 'nav-menu active' : 'nav-menu'}>
                     <li className='nav-item'>
-                        <Link to='/about' className='nav-link' onClick={closeMobileMenu}>
+                        <a href='#about' className='nav-link' onClick={closeMobileMenu}>
                             About
-                        </Link>
+                        </a>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/portfolio' className='nav-link' onClick={closeMobileMenu}>
+                        <a href='#portfolio' className='nav-link' onClick={closeMobileMenu}>
                             Portfolio
-                        </Link>
+                        </a>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/contact' className='nav-link' onClick={closeMobileMenu}>
+                        <a href='#contact' className='nav-link' onClick={closeMobileMenu}>
                             Contact
-                        </Link>
+                        </a>
                     </li>
                 </ul>
             </div>

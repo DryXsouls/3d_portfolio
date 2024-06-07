@@ -1,13 +1,13 @@
 import React, { useRef, useEffect } from 'react';
 import { useGLTF } from '@react-three/drei';
 import {useFrame, useThree} from '@react-three/fiber';
-import walk_scene from '../../assets/hobby/Book-model.glb';
+import travel_scene from '../../assets/hobby/Travel-model.glb';
 import {a} from '@react-spring/three';
 
-const Walk = ({isRotating, setIsRotating, ...props}) => {
-    const walkRef = useRef();
+const Travel = ({isRotating, setIsRotating, ...props}) => {
+    const travelRef = useRef();
     const {gl, viewport} = useThree();
-    const { nodes, materials } = useGLTF(walk_scene)
+    const { nodes, materials } = useGLTF(travel_scene)
 
     const lastX = useRef(0);
     const lastY = useRef(0);
@@ -36,7 +36,7 @@ const Walk = ({isRotating, setIsRotating, ...props}) => {
 
             const delta = (clientX - lastX.current) / viewport.width;
 
-            walkRef.current.rotation.y += delta * 0.01 * Math.PI;
+            travelRef.current.rotation.y += delta * 0.01 * Math.PI;
             lastX.current = clientX;
             rotationSpeed.current = delta * 0.01 * Math.PI;
         }
@@ -44,10 +44,10 @@ const Walk = ({isRotating, setIsRotating, ...props}) => {
     const handleKeyDown = (e) => {
         if(e.key === 'ArrowLeft'){
             if(!isRotating) setIsRotating(true);
-            walkRef.current.rotation.y -= 0.01 * Math.PI;
+            travelRef.current.rotation.y -= 0.01 * Math.PI;
         } else if(e.key ==='ArrowRight'){
             if(!isRotating) setIsRotating(true);
-            walkRef.current.rotation.y += 0.01 * Math.PI;
+            travelRef.current.rotation.y += 0.01 * Math.PI;
         }
     }
     const handleKeyUp = (e) => {
@@ -63,7 +63,7 @@ const Walk = ({isRotating, setIsRotating, ...props}) => {
             if(Math.abs(rotationSpeed.current) < 0.001){
                 rotationSpeed.current = 0;
             } else {
-                const rotation = walkRef.current.rotation.y;
+                const rotation = travelRef.current.rotation.y;
 
                 /**
                  * Normalize the rotation value to ensure it stays within the range [0, 2 * Math.PI].
@@ -118,10 +118,28 @@ const Walk = ({isRotating, setIsRotating, ...props}) => {
     },[gl,handlePointerDown,handlePointerUp,handlePointerMove]);
 
     return (
-        <a.group ref={walkRef} {...props} dispose={null}>
-
+        <a.group ref={travelRef} {...props} dispose={null}>
+            <mesh castShadow receiveShadow geometry={nodes.Sphere.geometry} material={materials.Earth} />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.Cylinder004.geometry}
+                material={materials['Material.010']}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.Cylinder004_1.geometry}
+                material={materials['Material.003']}
+            />
+            <mesh
+                castShadow
+                receiveShadow
+                geometry={nodes.Cylinder004_2.geometry}
+                material={materials.Material}
+            />
         </a.group>
     )
 }
 
-export default Walk;
+export default Travel;
