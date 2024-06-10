@@ -19,35 +19,114 @@ const HeroSkillMesh = () => {
 
     const adjustMeshForScreenSize = () => {
         let screenScale = null;
-        let screenPosition = [0,-6.5,-43];
-        let rotation = [0.25,0,0]
+        let screenScale2 = null;
+        let screenPosition = [0, -6.5, -43];
+        let rotation = [0.25,0,0];
+        let screenRotation1 = [0.25,0.25,0];
+        let screenRotation2 = [0.25,-0.25,0];
 
-        if(window.innerWidth <768){
-            screenScale = [1, 1, 1];
-            screenPosition = [0,-1, -0.5];
-        }
-        if(window.innerWidth <431) {
-            screenScale = [1, 1, 1];
+        let meshPosition1 = null;
+        let meshPosition2 = null;
+        let meshPosition3 = null;
+        let meshPosition4 = null;
+        let meshPosition5 = null;
+        let meshPosition6 = null;
+
+        let gMeshPosition1 = null;
+        let gMeshPosition2 = null;
+        let gMeshPosition3 = null;
+        let gMeshPosition4 = null;
+
+        if (window.innerWidth <= 1024) {
+            screenScale = [0.23, 0.23, 0.23];
+            screenScale2 = [0.07,0.07,0.07];
             screenPosition = [0, -1, -0.5];
-        }
-        else {
-            screenScale = [0.5,0.5, 0.5];
-            screenPosition = [0,-1,-1.5];
-        }
-        return [screenScale,screenPosition, rotation];
-    }
-    const [meshScale, meshPosition, meshRotation] = adjustMeshForScreenSize();
-    const [skillMesh1Scale, skillMesh1Position, skillMesh1Rotation] = [[0.075,0.075,0.075],[-2.15,-0.45,0],[0.25,0.25,0]];
-    const [skillMesh2Scale, skillMesh2Position, skillMesh2Rotation] = [[0.075,0.075,0.075],[-1.7,-0.45,0],[0.25,0.25,0]];
-    const [skillMesh3Scale, skillMesh3Position, skillMesh3Rotation] = [[0.075,0.075,0.075],[-1.25,-0.45,0],[0.25,0.25,0]];
-    const [skillMesh4Scale, skillMesh4Position, skillMesh4Rotation] = [[0.075,0.075,0.075],[-0.8,-0.45,0],[0.25,0.25,0]];
-    const [skillMesh5Scale, skillMesh5Position, skillMesh5Rotation] = [[0.075,0.075,0.075],[-0.35,-0.45,0],[0.25,0.25,0]];
-    const [skillMesh6Scale, skillMesh6Position, skillMesh6Rotation] = [[0.075,0.075,0.075],[0.1,-0.45,0],[0.25,0.25,0]];
+            //Program skill position
+            meshPosition1 = [-1.1,-0.5,0];
+            meshPosition2 = [-0.65,-0.5,0];
+            meshPosition3 = [-0.20,-0.5,0];
+            meshPosition4 = [0.20,-0.5,0];
+            meshPosition5 = [0.65,-0.5,0];
+            meshPosition6 = [1.10,-0.5,0];
+            //Graphic skill position
+            gMeshPosition1 = [-0.65,0,0];
+            gMeshPosition2 = [-0.20,0,0];
+            gMeshPosition3 = [0.20,0,0];
+            gMeshPosition4 = [0.65,0,0];
+        } else if (window.innerWidth <= 1280) {
+            screenScale = [0.27, 0.27, 0.27];
+            screenScale2 = [0.075,0.075,0.075];
+            screenPosition = [0, -1, -0.5];
+            //Program skill position
+            meshPosition1 = [-1.12,-0.5,0];
+            meshPosition2 = [-0.67,-0.5,0];
+            meshPosition3 = [-0.22,-0.5,0];
+            meshPosition4 = [0.22,-0.5,0];
+            meshPosition5 = [0.67,-0.5,0];
+            meshPosition6 = [1.12,-0.5,0];
+            //Graphic skill position
+            gMeshPosition1 = [-0.67,0,0];
+            gMeshPosition2 = [-0.22,0,0];
+            gMeshPosition3 = [0.22,0,0];
+            gMeshPosition4 = [0.67,0,0];
 
-    const [skillGMeshScale, skillGMeshPosition, skillGMeshRotation] = [[0.075,0.075,0.075],[0.75,-0.45,0],[0.25,-0.25,0]];
-    const [skillGMesh2Scale, skillGMesh2Position, skillGMesh2Rotation] = [[0.075,0.075,0.075],[1.2,-0.45,0],[0.25,-0.25,0]];
-    const [skillGMesh3Scale, skillGMesh3Position, skillGMesh3Rotation] = [[0.075,0.075,0.075],[1.65,-0.45,0],[0.25,-0.25,0]];
-    const [skillGMesh4Scale, skillGMesh4Position, skillGMesh4Rotation] = [[0.075,0.075,0.075],[2.1,-0.45,0],[0.25,-0.25,0]];  //rot mid -1.5
+        } else if (window.innerWidth <= 1366) {
+            screenScale = [0.3, 0.3, 0.3];
+            screenScale2 = [0.075,0.075,0.075];
+            screenPosition = [0, -1, -0.5];
+            //Program skill position
+            meshPosition1 = [-1.12,-0.5,0];
+            meshPosition2 = [-0.67,-0.5,0];
+            meshPosition3 = [-0.22,-0.5,0];
+            meshPosition4 = [0.22,-0.5,0];
+            meshPosition5 = [0.67,-0.5,0];
+            meshPosition6 = [1.12,-0.5,0];
+            //Graphic skill position
+            gMeshPosition1 = [-0.67,0,0];
+            gMeshPosition2 = [-0.22,0,0];
+            gMeshPosition3 = [0.22,0,0];
+            gMeshPosition4 = [0.67,0,0];
+
+        } else if (window.innerWidth <= 1600) {
+            screenScale = [0.36, 0.36, 0.36];
+            screenScale2 = [0.065,0.065,0.065];
+            screenPosition = [0, -1, -0.5];
+            //Program skill position
+            meshPosition1 = [-1.85,-0.5,0];
+            meshPosition2 = [-1.45,-0.5,0];
+            meshPosition3 = [-1.05,-0.5,0];
+            meshPosition4 = [-0.65,-0.5,0];
+            meshPosition5 = [-0.25,-0.5,0];
+            meshPosition6 = [0.15,-0.5,0];
+            //Graphic skill position
+            gMeshPosition1 = [0.65,-0.5,0];
+            gMeshPosition2 = [1.05,-0.5,0];
+            gMeshPosition3 = [1.45,-0.5,0];
+            gMeshPosition4 = [1.85,-0.5,0];
+
+        } else {
+            screenScale = [0.5,0.5, 0.5];
+            screenScale2 = [0.075,0.075,0.075];
+            screenPosition = [0,-1,-1.5];
+            //Program skill position
+            meshPosition1 = [-2.15,-0.45,0];
+            meshPosition2 = [-1.7,-0.45,0];
+            meshPosition3 = [-1.25,-0.45,0];
+            meshPosition4 = [-0.8,-0.45,0];
+            meshPosition5 = [-0.35,-0.45,0];
+            meshPosition6 = [0.1,-0.45,0];
+            //Graphic skill position
+            gMeshPosition1 = [0.75,-0.45,0];
+            gMeshPosition2 = [1.2,-0.45,0];
+            gMeshPosition3 = [1.65,-0.45,0];
+            gMeshPosition4 = [2.1,-0.45,0];
+        }
+
+        return [screenScale, screenPosition, rotation, screenScale2,screenRotation1, screenRotation2, meshPosition1, meshPosition2, meshPosition3, meshPosition4, meshPosition5, meshPosition6,  gMeshPosition1, gMeshPosition2, gMeshPosition3, gMeshPosition4];
+    }
+
+    const [meshScale, meshPosition, meshRotation, skillMeshScale, skillMeshRotation1, skillMeshRotation2,skillMesh1Position,skillMesh2Position,skillMesh3Position,skillMesh4Position,skillMesh5Position,skillMesh6Position,skillGMesh1Position,skillGMesh2Position,skillGMesh3Position,skillGMesh4Position] = adjustMeshForScreenSize();
+
     return(
         <section className='w-half h-screen relative'>
             <Canvas className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
@@ -76,43 +155,43 @@ const HeroSkillMesh = () => {
 
                     <HtmlMesh
                         position={skillMesh1Position}
-                        scale={skillMesh1Scale}
-                        rotation={skillMesh1Rotation}
+                        scale={skillMeshScale}
+                        rotation={skillMeshRotation1}
                         isRotating={isRotating}
                         setIsRotating={setIsRotating}
                     />
                     <CssMesh
                         position={skillMesh2Position}
-                        scale={skillMesh2Scale}
-                        rotation={skillMesh2Rotation}
+                        scale={skillMeshScale}
+                        rotation={skillMeshRotation1}
                         isRotating={isRotating}
                         setIsRotating={setIsRotating}
                     />
                     <JsMesh
                         position={skillMesh3Position}
-                        scale={skillMesh3Scale}
-                        rotation={skillMesh3Rotation}
+                        scale={skillMeshScale}
+                        rotation={skillMeshRotation1}
                         isRotating={isRotating}
                         setIsRotating={setIsRotating}
                     />
                     <ReactMesh
                         position={skillMesh4Position}
-                        scale={skillMesh4Scale}
-                        rotation={skillMesh4Rotation}
+                        scale={skillMeshScale}
+                        rotation={skillMeshRotation1}
                         isRotating={isRotating}
                         setIsRotating={setIsRotating}
                     />
                     <ThreeJsMesh
                         position={skillMesh5Position}
-                        scale={skillMesh5Scale}
-                        rotation={skillMesh5Rotation}
+                        scale={skillMeshScale}
+                        rotation={skillMeshRotation1}
                         isRotating={isRotating}
                         setIsRotating={setIsRotating}
                     />
                     <MySqlMesh
                         position={skillMesh6Position}
-                        scale={skillMesh6Scale}
-                        rotation={skillMesh6Rotation}
+                        scale={skillMeshScale}
+                        rotation={skillMeshRotation1}
                         isRotating={isRotating}
                         setIsRotating={setIsRotating}
                     />
@@ -120,30 +199,30 @@ const HeroSkillMesh = () => {
 
 
                     <Blender
-                    position={skillGMeshPosition}
-                    scale={skillGMeshScale}
-                    rotation={skillGMeshRotation}
+                    position={skillGMesh1Position}
+                    scale={skillMeshScale}
+                    rotation={skillMeshRotation2}
                     isRotating={isRotating}
                     setIsRotating={setIsRotating}
                     />
                     <PShop
                         position={skillGMesh2Position}
-                        scale={skillGMesh2Scale}
-                        rotation={skillGMesh2Rotation}
+                        scale={skillMeshScale}
+                        rotation={skillMeshRotation2}
                         isRotating={isRotating}
                         setIsRotating={setIsRotating}
                     />
                     <AIllustrator
                         position={skillGMesh3Position}
-                        scale={skillGMesh3Scale}
-                        rotation={skillGMesh3Rotation}
+                        scale={skillMeshScale}
+                        rotation={skillMeshRotation2}
                         isRotating={isRotating}
                         setIsRotating={setIsRotating}
                     />
                     <Figma
                         position={skillGMesh4Position}
-                        scale={skillGMesh4Scale}
-                        rotation={skillGMesh4Rotation}
+                        scale={skillMeshScale}
+                        rotation={skillMeshRotation2}
                         isRotating={isRotating}
                         setIsRotating={setIsRotating}
                     />

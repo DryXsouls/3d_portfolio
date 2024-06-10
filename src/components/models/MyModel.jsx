@@ -10,6 +10,8 @@ const MyModel = ({isRotating, setIsRotating, ...props}) => {
     const { nodes, materials } = useGLTF(my_scene)
 
     const lastX = useRef(0);
+    const lastY = useRef(0);
+    const lastZ = useRef(0);
     const rotationSpeed = useRef(0);
     const dampingFactor = useRef(0.95);
 
@@ -19,7 +21,11 @@ const MyModel = ({isRotating, setIsRotating, ...props}) => {
         setIsRotating(true);
         //figure out if it's mouse event or touch screen event
         const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
         lastX.current = clientX;
+        lastY.current = clientY;
+        lastZ.current = clientZ;
     }
     const handlePointerUp = (e) =>{
         e.stopPropagation();
@@ -31,12 +37,18 @@ const MyModel = ({isRotating, setIsRotating, ...props}) => {
         e.preventDefault();
         if(isRotating){
             const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+            const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+            const deltaX = (clientX - lastX.current) / viewport.width;
 
-            const delta = (clientX - lastX.current) / viewport.width;
 
-            myRef.current.rotation.y += delta * 0.01 * Math.PI;
+            myRef.current.rotation.y += deltaX * 0.01 * Math.PI;
+            myRef.current.rotation.x += deltaX * 0.01 * Math.PI;
+            myRef.current.rotation.z += deltaX * 0.01 * Math.PI;
+
             lastX.current = clientX;
-            rotationSpeed.current = delta * 0.01 * Math.PI;
+            lastZ.current = clientZ;
+            lastY.current = clientY;
+            rotationSpeed.current = deltaX * 0.01 * Math.PI;
         }
     }
     const handleKeyDown = (e) => {
@@ -47,6 +59,7 @@ const MyModel = ({isRotating, setIsRotating, ...props}) => {
             if(!isRotating) setIsRotating(true);
             myRef.current.rotation.y += 0.01 * Math.PI;
         }
+
     }
     const handleKeyUp = (e) => {
         if(e.key === 'ArrowLeft' || e.key ==='ArrowRight'){
@@ -55,6 +68,9 @@ const MyModel = ({isRotating, setIsRotating, ...props}) => {
     }
 
     useFrame(() => {
+        if (myRef.current) {
+            myRef.current.rotation.y += 0.01; // Adjust the rotation speed as needed
+        }
         if(!isRotating){
             rotationSpeed.current *= dampingFactor;
 
@@ -62,6 +78,8 @@ const MyModel = ({isRotating, setIsRotating, ...props}) => {
                 rotationSpeed.current = 0;
             } else {
                 const rotation = myRef.current.rotation.y;
+
+
 
                 /**
                  * Normalize the rotation value to ensure it stays within the range [0, 2 * Math.PI].
@@ -118,44 +136,30 @@ const MyModel = ({isRotating, setIsRotating, ...props}) => {
     return (
         <a.group ref={myRef} {...props} dispose={null}>
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Cube_1.geometry}
                 material={materials.Material}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Cube_2.geometry}
                 material={materials['Material.002']}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Cube_3.geometry}
                 material={materials['Material.003']}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Cube_4.geometry}
                 material={materials['Material.004']}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Cube_5.geometry}
                 material={materials['Material.005']}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Cube_6.geometry}
                 material={materials['Material.006']}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Cube_7.geometry}
                 material={materials['Material.007']}
             />

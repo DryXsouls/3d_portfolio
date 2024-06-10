@@ -8,22 +8,27 @@ const AboutMesh = () => {
 
     const adjustMeshForScreenSize = () => {
         let screenScale = null;
-        let screenPosition = [0,-6.5,-43];
-        let rotation = [0.25,5,0]
+        let screenPosition = [0, -6.5, -43];
+        let rotation = [0.25, 5.8, 0];
 
-        if(window.innerWidth <768){
-            screenScale = [0.9, 0.9, 0.9];
-            screenPosition = [0,-1, -0.5];
-        }
-        if(window.innerWidth <431) {
-            screenScale = [0.9, 0.9, 0.9];
-            screenPosition = [0, -1, -0.5];
-        }
-        else {
+        if (window.innerWidth <= 1024) {
+            screenScale = [1.3, 1.3, 1.3];
+            screenPosition = [0, 0, -0.5];
+        } else if (window.innerWidth <= 1280) {
+            screenScale = [1.4, 1.4, 1.4];
+            screenPosition = [0, 0, -0.5];
+        } else if (window.innerWidth <= 1366) {
+            screenScale = [1.5, 1.5, 1.5];
+            screenPosition = [0, 0, -0.5];
+        } else if (window.innerWidth <= 1600) {
+            screenScale = [1.6, 1.6, 1.6];
+            screenPosition = [0, 0, -0.5];
+        } else {
             screenScale = [3, 3, 3];
-            screenPosition = [0,0,-5];
+            screenPosition = [0, 0, -5];
         }
-        return [screenScale,screenPosition, rotation];
+
+        return [screenScale, screenPosition, rotation];
     }
     const [meshScale, meshPosition, meshRotation] = adjustMeshForScreenSize();
     return(

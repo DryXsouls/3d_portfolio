@@ -17,7 +17,7 @@ function Contact(){
                         <h1 className='text-5xl font-black'>You can get in touch with me through:</h1>
                         <div className='flex flex-col w-full h-full content-center text-center'>
 
-                            <Link className='w-32 h-32  rounded-md self-center shadow-lg shadow-black ' to='https://www.linkedin.com/in/mat%C3%BA%C5%A1-vytyk%C3%A1%C4%8D-03b001212/'>
+                            <Link className='w-32 h-32  rounded-md self-center shadow-lg shadow-black hover:bg-black' to='https://www.linkedin.com/in/mat%C3%BA%C5%A1-vytyk%C3%A1%C4%8D-03b001212/'>
                                 <LinkedInMesh/>
                             </Link>
 

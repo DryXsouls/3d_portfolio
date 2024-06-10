@@ -8,22 +8,27 @@ const HeroMesh = () => {
 
     const adjustMeshForScreenSize = () => {
         let screenScale = null;
-        let screenPosition = [0,-6.5,-43];
-        let rotation = [0.25,5.8,0]
+        let screenPosition = [0, -6.5, -43];
+        let rotation = [0.25, 5.8, 0];
 
-        if(window.innerWidth <768){
-            screenScale = [0.9, 0.9, 0.9];
-            screenPosition = [0,-1, -0.5];
-        }
-        if(window.innerWidth <431) {
-            screenScale = [0.9, 0.9, 0.9];
+        if (window.innerWidth <= 1024) {
+            screenScale = [0.28, 0.28, 0.28];
             screenPosition = [0, -1, -0.5];
-        }
-        else {
+        } else if (window.innerWidth <= 1280) {
+            screenScale = [0.37, 0.37, 0.37];
+            screenPosition = [0, -1, -0.5];
+        } else if (window.innerWidth <= 1366) {
+            screenScale = [0.4, 0.4, 0.4];
+            screenPosition = [0, -1, -0.5];
+        } else if (window.innerWidth <= 1600) {
+            screenScale = [0.45, 0.45, 0.45];
+            screenPosition = [0, -1, -0.5];
+        } else {
             screenScale = [1, 1, 1];
-            screenPosition = [0,0,-5];
+            screenPosition = [0, 0, -5];
         }
-        return [screenScale,screenPosition, rotation];
+
+        return [screenScale, screenPosition, rotation];
     }
     const [meshScale, meshPosition, meshRotation] = adjustMeshForScreenSize();
     return(

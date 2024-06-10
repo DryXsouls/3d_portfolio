@@ -118,8 +118,6 @@ const GmailModel = ({isRotating, setIsRotating, ...props}) => {
     return (
         <a.group ref={gmailRef} {...props} dispose={null}>
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Text.geometry}
                 material={materials['Material.005']}
                 position={[0, 1.581, 0]}

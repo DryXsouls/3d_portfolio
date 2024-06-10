@@ -118,8 +118,6 @@ const MyNumberModel = ({isRotating, setIsRotating, ...props}) => {
     return (
         <a.group ref={myNumberRef} {...props} dispose={null}>
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Text.geometry}
                 material={materials['Material.001']}
                 rotation={[Math.PI / 2, 0, 0]}

@@ -55,6 +55,9 @@ const TelephoneModel = ({isRotating, setIsRotating, ...props}) => {
     }
 
     useFrame(() => {
+        if(telephoneRef.current){
+            telephoneRef.current.rotation.y += 0.01;
+        }
         if(!isRotating){
             rotationSpeed.current *= dampingFactor;
 
@@ -118,14 +121,10 @@ const TelephoneModel = ({isRotating, setIsRotating, ...props}) => {
     return (
         <a.group ref={telephoneRef} {...props} dispose={null}>
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Cube.geometry}
                 material={materials['Material.001']}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Sphere.geometry}
                 material={materials['Material.001']}
                 position={[-0.783, -0.211, 0]}
@@ -133,28 +132,20 @@ const TelephoneModel = ({isRotating, setIsRotating, ...props}) => {
                 scale={0.411}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Cube001.geometry}
                 material={materials['Material.002']}
             />
             <group position={[-0.026, -0.108, 0]} rotation={[0, 0, -0.512]} scale={0.598}>
                 <mesh
-                    castShadow
-                    receiveShadow
                     geometry={nodes.Cylinder_1.geometry}
                     material={materials['Material.001']}
                 />
                 <mesh
-                    castShadow
-                    receiveShadow
                     geometry={nodes.Cylinder_2.geometry}
                     material={materials.Material}
                 />
             </group>
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Cylinder001.geometry}
                 material={materials['Material.002']}
                 position={[0.01, 0.489, 0.047]}
@@ -162,8 +153,6 @@ const TelephoneModel = ({isRotating, setIsRotating, ...props}) => {
                 scale={0.344}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Text.geometry}
                 material={nodes.Text.material}
                 position={[0.153, 0.788, -0.212]}
@@ -171,8 +160,6 @@ const TelephoneModel = ({isRotating, setIsRotating, ...props}) => {
                 scale={0.173}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Text001.geometry}
                 material={nodes.Text001.material}
                 position={[0.07, 0.788, -0.025]}
@@ -180,8 +167,6 @@ const TelephoneModel = ({isRotating, setIsRotating, ...props}) => {
                 scale={0.173}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Text002.geometry}
                 material={nodes.Text002.material}
                 position={[0.123, 0.788, 0.17]}
@@ -189,8 +174,6 @@ const TelephoneModel = ({isRotating, setIsRotating, ...props}) => {
                 scale={0.173}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Text003.geometry}
                 material={nodes.Text003.material}
                 position={[0.288, 0.788, 0.321]}
@@ -198,8 +181,6 @@ const TelephoneModel = ({isRotating, setIsRotating, ...props}) => {
                 scale={0.173}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Text004.geometry}
                 material={nodes.Text004.material}
                 position={[0.509, 0.788, 0.353]}
@@ -207,8 +188,6 @@ const TelephoneModel = ({isRotating, setIsRotating, ...props}) => {
                 scale={0.173}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Text005.geometry}
                 material={nodes.Text005.material}
                 position={[0.724, 0.788, 0.285]}
@@ -216,8 +195,6 @@ const TelephoneModel = ({isRotating, setIsRotating, ...props}) => {
                 scale={0.173}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Text006.geometry}
                 material={nodes.Text006.material}
                 position={[0.866, 0.788, 0.117]}
@@ -225,8 +202,6 @@ const TelephoneModel = ({isRotating, setIsRotating, ...props}) => {
                 scale={0.173}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Text007.geometry}
                 material={nodes.Text007.material}
                 position={[0.875, 0.788, -0.083]}
@@ -234,8 +209,6 @@ const TelephoneModel = ({isRotating, setIsRotating, ...props}) => {
                 scale={0.173}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Text008.geometry}
                 material={nodes.Text008.material}
                 position={[0.765, 0.788, -0.257]}
@@ -243,8 +216,6 @@ const TelephoneModel = ({isRotating, setIsRotating, ...props}) => {
                 scale={0.173}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Text009.geometry}
                 material={nodes.Text009.material}
                 position={[0.554, 0.788, -0.351]}
@@ -252,8 +223,6 @@ const TelephoneModel = ({isRotating, setIsRotating, ...props}) => {
                 scale={0.173}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Cylinder002.geometry}
                 material={materials['Material.002']}
                 position={[-0.696, -0.334, 0.679]}
@@ -261,8 +230,7 @@ const TelephoneModel = ({isRotating, setIsRotating, ...props}) => {
                 scale={0.046}
             />
             <mesh
-                castShadow
-                receiveShadow
+
                 geometry={nodes.Cylinder003.geometry}
                 material={materials['Material.002']}
                 position={[-0.791, 0.475, 1.564]}
@@ -270,8 +238,6 @@ const TelephoneModel = ({isRotating, setIsRotating, ...props}) => {
                 scale={0.046}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Circle.geometry}
                 material={materials['Material.001']}
             />

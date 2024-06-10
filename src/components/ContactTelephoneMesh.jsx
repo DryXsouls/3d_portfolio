@@ -9,27 +9,29 @@ const ContactTelephoneMesh = (modelName) => {
 
     const adjustMeshForScreenSize = () => {
         let screenScale = null;
-        let screenPosition = [0,-6.5,-43];
-        let rotation = [0.25,5,0]
+        let screenPosition = [0, -6.5, -43];
+        let rotation = [0.25,5.2,0];
 
-        if(window.innerWidth <768){
-            screenScale = [1, 1, 1];
-            screenPosition = [0,-1, -0.5];
+        if (window.innerWidth <= 1024) {
+            screenScale = [0.9, 0.9, 0.9];
+            screenPosition = [0, 0, 0];
+        } else if (window.innerWidth <= 1280) {
+            screenScale = [1.13, 1.13, 1.13];
+            screenPosition = [0, 0, 0];
+        } else if (window.innerWidth <= 1366) {
+            screenScale = [1.2, 1.2, 1.2];
+            screenPosition = [0, 0, 0];
+        } else if (window.innerWidth <= 1600) {
+            screenScale = [1.35, 1.35, 1.35];
+            screenPosition = [0, 0, 0];
+        } else {
+            screenScale = [1.5,1.5,1.5];
+            screenPosition = [0, 0, 0];
         }
-        if(window.innerWidth <431) {
-            screenScale = [1, 1, 1];
-            screenPosition = [0, -1, -0.5];
-        }
-        else {
-            screenScale = [0.5,0.5, 0.5];
-            screenPosition = [0,-1,-1.5];
-        }
-        return [screenScale,screenPosition, rotation];
+
+        return [screenScale, screenPosition, rotation];
     }
     const [meshScale, meshPosition, meshRotation] = adjustMeshForScreenSize();
-    const [mesh1Scale, mesh1Position, mesh1Rotation] = [[1.5,1.5,1.5],[0,0,0],[0.25,5.2,0]];
-    const [mesh2Scale, mesh2Position, mesh2Rotation] = [[0.7,0.7,0.7],[0,-1,-1],[0.25,0.25,0]];
-    const [mesh3Scale, mesh3Position, mesh3Rotation] = [[0.5,0.5,0.5],[0,-3,-1],[0.25,0.25,0]];
 
     return(
         <section className='w-full h-full relative'>
@@ -50,9 +52,9 @@ const ContactTelephoneMesh = (modelName) => {
                         intensity={5}
                     />
                     <TelephoneModel
-                        position={mesh1Position}
-                        scale={mesh1Scale}
-                        rotation={mesh1Rotation}
+                        position={meshPosition}
+                        scale={meshScale}
+                        rotation={meshRotation}
                         isRotating={isRotating}
                         setIsRotating={setIsRotating}
                     />

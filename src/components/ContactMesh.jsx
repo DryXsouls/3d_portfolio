@@ -11,27 +11,43 @@ const ContactMesh = (modelName) => {
 
     const adjustMeshForScreenSize = () => {
         let screenScale = null;
-        let screenPosition = [0,-6.5,-43];
-        let rotation = [0.25,0,0]
+        let screenScale2 = null;
+        let screenPosition = [0, -6.5, -43];
+        let screenPosition2 = [0, -6.5, -43];
 
-        if(window.innerWidth <768){
-            screenScale = [1, 1, 1];
-            screenPosition = [0,-1, -0.5];
+        let rotation = [0.25,0.25,0];
+
+        if (window.innerWidth <= 1024) {
+            screenScale = [0.13, 0.15, 0.13];
+            screenScale2 = [0.45, 0.45, 0.45];
+            screenPosition = [0,1,-1];
+            screenPosition2 = [0,-1,-1];
+        } else if (window.innerWidth <= 1280) {
+            screenScale = [0.15, 0.17, 0.15];
+            screenScale2 = [0.55, 0.55, 0.55];
+            screenPosition = [0,1,-1];
+            screenPosition2 = [0,-1,-1];
+        } else if (window.innerWidth <= 1366) {
+            screenScale = [0.155, 0.18, 0.155];
+            screenScale2 = [0.56, 0.56, 0.56];
+            screenPosition = [0,1,-1];
+            screenPosition2 = [0,-1,-1];
+        } else if (window.innerWidth <= 1600) {
+            screenScale = [0.16, 0.19, 0.16];
+            screenScale2 = [0.6, 0.6, 0.6];
+            screenPosition = [0,1,-1];
+            screenPosition2 = [0,-1,-1];
+        } else {
+            screenScale = [0.17,0.17,0.17];
+            screenScale2 = [0.7,0.7,0.7];
+            screenPosition = [0,1,-1];
+            screenPosition2 = [0,-1,-1];
         }
-        if(window.innerWidth <431) {
-            screenScale = [1, 1, 1];
-            screenPosition = [0, -1, -0.5];
-        }
-        else {
-            screenScale = [0.5,0.5, 0.5];
-            screenPosition = [0,-1,-1.5];
-        }
-        return [screenScale,screenPosition, rotation];
+
+        return [screenScale, screenPosition, rotation, screenScale2, screenPosition2];
     }
-    const [meshScale, meshPosition, meshRotation] = adjustMeshForScreenSize();
-    const [mesh1Scale, mesh1Position, mesh1Rotation] = [[0.17,0.17,0.17],[0,1,-1],[0.25,0.25,0]];
-    const [mesh2Scale, mesh2Position, mesh2Rotation] = [[0.7,0.7,0.7],[0,-1,-1],[0.25,0.25,0]];
-    const [mesh3Scale, mesh3Position, mesh3Rotation] = [[0.5,0.5,0.5],[0,-3,-1],[0.25,0.25,0]];
+    const [mesh1Scale, mesh1Position, mesh1Rotation, mesh2Scale, mesh2Position] = adjustMeshForScreenSize();
+
 
     return(
         <section className='w-full h-full relative'>
@@ -61,7 +77,7 @@ const ContactMesh = (modelName) => {
                     <MyNumberModel
                         position={mesh2Position}
                         scale={mesh2Scale}
-                        rotation={mesh2Rotation}
+                        rotation={mesh1Rotation}
                         isRotating={isRotating}
                         setIsRotating={setIsRotating}
                     />

@@ -10,8 +10,6 @@ const HeroSkillShelf = ({isRotating, setIsRotating, ...props}) => {
     const { nodes, materials } = useGLTF(heroSkillShelf_scene)
 
     const lastX = useRef(0);
-    const lastY = useRef(0);
-    const lastZ = useRef(0);
     const rotationSpeed = useRef(0);
     const dampingFactor = useRef(0.95);
 

@@ -3,6 +3,7 @@ import { useGLTF } from '@react-three/drei';
 import {useFrame, useThree} from '@react-three/fiber';
 import hobbyShelf_scene from '../assets/HobbyShelf.glb';
 import {a} from '@react-spring/three';
+import RotationSetting from "../RotationSettings.jsx";
 
 const HobbyShelf = ({isRotating, setIsRotating, ...props}) => {
     const hobbyShelfRef = useRef();
@@ -118,27 +119,19 @@ const HobbyShelf = ({isRotating, setIsRotating, ...props}) => {
     return (
         <a.group ref={hobbyShelfRef} {...props} dispose={null}>
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Text.geometry}
                 material={materials.SecondaryColor}
                 position={[0, 0.092, -0.132]}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Cube_1.geometry}
                 material={materials.BaseColor}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Cube_2.geometry}
                 material={materials.BlackPart}
             />
             <mesh
-                castShadow
-                receiveShadow
                 geometry={nodes.Cube_3.geometry}
                 material={materials.SecondaryColor}
             />
