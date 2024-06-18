@@ -24,10 +24,6 @@ function About(){
                             <HobbyMesh/>
                         </div>
                     </div>
-
-                </div>
-                <div className='relative w-6/7 h-4/8 -top-60 -right-56 overflow-hidden'>
-
                 </div>
             </div>
         </section>

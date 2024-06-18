@@ -20,10 +20,10 @@ const HeroSkillMesh = () => {
     const adjustMeshForScreenSize = () => {
         let screenScale = null;
         let screenScale2 = null;
-        let screenPosition = [0, -6.5, -43];
-        let rotation = [0.25,0,0];
-        let screenRotation1 = [0.25,0.25,0];
-        let screenRotation2 = [0.25,-0.25,0];
+        let screenPosition = [0,1,-1.5];
+        let rotation = [0.5,0,0];
+        let screenRotation1 = [0.5,0.25,0];
+        let screenRotation2 = [0.5,-0.25,0];
 
         let meshPosition1 = null;
         let meshPosition2 = null;
@@ -38,88 +38,84 @@ const HeroSkillMesh = () => {
         let gMeshPosition4 = null;
 
         if (window.innerWidth <= 1024) {
-            screenScale = [0.23, 0.23, 0.23];
-            screenScale2 = [0.07,0.07,0.07];
-            screenPosition = [0, -1, -0.5];
+            screenScale = [0.33, 0.33, 0.33];
+            screenScale2 = [0.085,0.085,0.085];
             //Program skill position
-            meshPosition1 = [-1.1,-0.5,0];
-            meshPosition2 = [-0.65,-0.5,0];
-            meshPosition3 = [-0.20,-0.5,0];
-            meshPosition4 = [0.20,-0.5,0];
-            meshPosition5 = [0.65,-0.5,0];
-            meshPosition6 = [1.10,-0.5,0];
+            meshPosition1 = [-1.25,1.25,0];
+            meshPosition2 = [-0.75,1.25,0];
+            meshPosition3 = [-0.255,1.25,0];
+            meshPosition4 = [0.255,1.25,0];
+            meshPosition5 = [0.75,1.25,0];
+            meshPosition6 = [1.25,1.25,0];
             //Graphic skill position
-            gMeshPosition1 = [-0.65,0,0];
-            gMeshPosition2 = [-0.20,0,0];
-            gMeshPosition3 = [0.20,0,0];
-            gMeshPosition4 = [0.65,0,0];
+            gMeshPosition1 = [-0.75,2,0];
+            gMeshPosition2 = [-0.255,2,0];
+            gMeshPosition3 = [0.255,2,0];
+            gMeshPosition4 = [0.75,2,0];
         } else if (window.innerWidth <= 1280) {
-            screenScale = [0.27, 0.27, 0.27];
-            screenScale2 = [0.075,0.075,0.075];
-            screenPosition = [0, -1, -0.5];
+            screenScale = [0.4, 0.4, 0.4];
+            screenScale2 = [0.1,0.1,0.1];
             //Program skill position
-            meshPosition1 = [-1.12,-0.5,0];
-            meshPosition2 = [-0.67,-0.5,0];
-            meshPosition3 = [-0.22,-0.5,0];
-            meshPosition4 = [0.22,-0.5,0];
-            meshPosition5 = [0.67,-0.5,0];
-            meshPosition6 = [1.12,-0.5,0];
+            meshPosition1 = [-1.5,1.25,0];
+            meshPosition2 = [-0.9,1.25,0];
+            meshPosition3 = [-0.3,1.25,0];
+            meshPosition4 = [0.3,1.25,0];
+            meshPosition5 = [0.9,1.25,0];
+            meshPosition6 = [1.5,1.25,0];
             //Graphic skill position
-            gMeshPosition1 = [-0.67,0,0];
-            gMeshPosition2 = [-0.22,0,0];
-            gMeshPosition3 = [0.22,0,0];
-            gMeshPosition4 = [0.67,0,0];
+            gMeshPosition1 = [-0.9,2,0];
+            gMeshPosition2 = [-0.3,2,0];
+            gMeshPosition3 = [0.3,2,0];
+            gMeshPosition4 = [0.9,2,0];
 
         } else if (window.innerWidth <= 1366) {
-            screenScale = [0.3, 0.3, 0.3];
-            screenScale2 = [0.075,0.075,0.075];
-            screenPosition = [0, -1, -0.5];
+            screenScale = [0.4, 0.4, 0.4];
+            screenScale2 = [0.1,0.1,0.1];
             //Program skill position
-            meshPosition1 = [-1.12,-0.5,0];
-            meshPosition2 = [-0.67,-0.5,0];
-            meshPosition3 = [-0.22,-0.5,0];
-            meshPosition4 = [0.22,-0.5,0];
-            meshPosition5 = [0.67,-0.5,0];
-            meshPosition6 = [1.12,-0.5,0];
+            meshPosition1 = [-1.5,1.25,0];
+            meshPosition2 = [-0.9,1.25,0];
+            meshPosition3 = [-0.3,1.25,0];
+            meshPosition4 = [0.3,1.25,0];
+            meshPosition5 = [0.9,1.25,0];
+            meshPosition6 = [1.5,1.25,0];
             //Graphic skill position
-            gMeshPosition1 = [-0.67,0,0];
-            gMeshPosition2 = [-0.22,0,0];
-            gMeshPosition3 = [0.22,0,0];
-            gMeshPosition4 = [0.67,0,0];
+            gMeshPosition1 = [-0.9,2,0];
+            gMeshPosition2 = [-0.3,2,0];
+            gMeshPosition3 = [0.3,2,0];
+            gMeshPosition4 = [0.9,2,0];
 
         } else if (window.innerWidth <= 1600) {
-            screenScale = [0.36, 0.36, 0.36];
+            screenScale = [0.4, 0.4, 0.4];
             screenScale2 = [0.065,0.065,0.065];
-            screenPosition = [0, -1, -0.5];
             //Program skill position
-            meshPosition1 = [-1.85,-0.5,0];
-            meshPosition2 = [-1.45,-0.5,0];
-            meshPosition3 = [-1.05,-0.5,0];
-            meshPosition4 = [-0.65,-0.5,0];
-            meshPosition5 = [-0.25,-0.5,0];
-            meshPosition6 = [0.15,-0.5,0];
+            meshPosition1 = [-1.85,1.2,0];
+            meshPosition2 = [-1.45,1.2,0];
+            meshPosition3 = [-1.05,1.2,0];
+            meshPosition4 = [-0.65,1.2,0];
+            meshPosition5 = [-0.25,1.2,0];
+            meshPosition6 = [0.15,1.2,0];
             //Graphic skill position
-            gMeshPosition1 = [0.65,-0.5,0];
-            gMeshPosition2 = [1.05,-0.5,0];
-            gMeshPosition3 = [1.45,-0.5,0];
-            gMeshPosition4 = [1.85,-0.5,0];
+            gMeshPosition1 = [0.65,1.2,0];
+            gMeshPosition2 = [1.05,1.2,0];
+            gMeshPosition3 = [1.45,1.2,0];
+            gMeshPosition4 = [1.85,1.2,0];
 
         } else {
             screenScale = [0.5,0.5, 0.5];
             screenScale2 = [0.075,0.075,0.075];
-            screenPosition = [0,-1,-1.5];
+            screenPosition = [0,1,-1.5];
             //Program skill position
-            meshPosition1 = [-2.15,-0.45,0];
-            meshPosition2 = [-1.7,-0.45,0];
-            meshPosition3 = [-1.25,-0.45,0];
-            meshPosition4 = [-0.8,-0.45,0];
-            meshPosition5 = [-0.35,-0.45,0];
-            meshPosition6 = [0.1,-0.45,0];
+            meshPosition1 = [-2.15,1.25,0];
+            meshPosition2 = [-1.7,1.25,0];
+            meshPosition3 = [-1.25,1.25,0];
+            meshPosition4 = [-0.8,1.25,0];
+            meshPosition5 = [-0.35,1.25,0];
+            meshPosition6 = [0.1,1.25,0];
             //Graphic skill position
-            gMeshPosition1 = [0.75,-0.45,0];
-            gMeshPosition2 = [1.2,-0.45,0];
-            gMeshPosition3 = [1.65,-0.45,0];
-            gMeshPosition4 = [2.1,-0.45,0];
+            gMeshPosition1 = [0.75,1.25,0];
+            gMeshPosition2 = [1.2,1.25,0];
+            gMeshPosition3 = [1.65,1.25,0];
+            gMeshPosition4 = [2.1,1.25,0];
         }
 
         return [screenScale, screenPosition, rotation, screenScale2,screenRotation1, screenRotation2, meshPosition1, meshPosition2, meshPosition3, meshPosition4, meshPosition5, meshPosition6,  gMeshPosition1, gMeshPosition2, gMeshPosition3, gMeshPosition4];

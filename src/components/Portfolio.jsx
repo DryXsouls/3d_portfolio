@@ -12,22 +12,22 @@ function Portfolio(){
                 <h1 className='font-black text-6xl'>Each project is unique and designed for business in mind</h1>
             </article>
             <div className='flex flex-col gap-y-40'>
-                    <article className='flex gap-x-2 border-l-4 border-black rounded-md'>
-                        <Link className='w-2/4' to='https://wolfcape.netlify.app/' >
-                            <figure className='w-full h-full flex-1 p-2'>
-                                <img src={WolfCapePage} alt='WolfCape Page' className='h-full flex-1 w-full rounded-md'/>
-                            </figure>
-                        </Link>
-                        <div className='flex flex-col w-2/4 h-full'>
-                            <article className='w-full h-2/4'>
-                                <h2 className='text-5xl font-black text-orange-800 pb-5'>Wolfcape</h2>
-                                <p className='text-3xl font-normal'>An online Wolfcape Studio page that informs studio fans about the progress of their games in development with an option of buying the game through the steam.</p>
-                            </article>
-                            <div className='w-full h-2/4 flex gap-x-10'>
-                                <WolfCapeMesh/>
-                            </div>
+                <article className='flex gap-x-2 border-l-4 border-black rounded-md'>
+                    <Link className='w-2/4' to='https://wolfcape.netlify.app/' >
+                        <figure className='w-full h-full flex-1 p-2'>
+                            <img src={WolfCapePage} alt='WolfCape Page' className='h-full flex-1 w-full rounded-md'/>
+                        </figure>
+                    </Link>
+                    <div className='flex flex-col w-2/4 h-full'>
+                        <article className='w-full h-2/4'>
+                            <h2 className='text-5xl font-black text-orange-800 pb-5'>Wolfcape</h2>
+                            <p className='text-3xl font-normal'>An online Wolfcape Studio page that informs studio fans about the progress of their games in development with an option of buying the game through the steam.</p>
+                        </article>
+                        <div className='w-full h-2/4 flex gap-x-10'>
+                            <WolfCapeMesh/>
                         </div>
-                    </article>
+                    </div>
+                </article>
 
                 <article className='flex  flex-row-reverse gap-x-2 border-r-4 border-black rounded-md'>
                     <Link className='w-2/4' to='https://wolfcape.netlify.app/' >
@@ -44,6 +44,22 @@ function Portfolio(){
                             <WolfCapeMesh/>
                         </div>
 
+                    </div>
+                </article>
+                <article className='flex gap-x-2 border-l-4 border-black rounded-md'>
+                    <Link className='w-2/4' to='https://portfoliomvdesign.netlify.app/' >
+                        <figure className='w-full h-full flex-1 p-2'>
+                            <img src={WolfCapePage} alt='3D Modeling Portfolio' className='h-full flex-1 w-full rounded-md'/>
+                        </figure>
+                    </Link>
+                    <div className='flex flex-col w-2/4 h-full'>
+                        <article className='w-full h-2/4'>
+                            <h2 className='text-5xl font-black text-orange-800 pb-5'>My 3D Modeling Portfolio</h2>
+                            <p className='text-3xl font-normal'>Lore ipsum lore ipsum Lore ipsum lore ipsum Lore ipsum lore ipsum Lore ipsum lore ipsum Lore ipsum lore ipsum Lore ipsum lore ipsum Lore ipsum lore ipsum.</p>
+                        </article>
+                        <div className='w-full h-2/4 flex gap-x-10'>
+                            <WolfCapeMesh/>
+                        </div>
                     </div>
                 </article>
 
