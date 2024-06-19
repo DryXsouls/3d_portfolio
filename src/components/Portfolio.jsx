@@ -57,7 +57,7 @@ function Portfolio(){
                     <div className='flex flex-col w-2/4 h-full'>
                         <article className='w-full h-2/4'>
                             <h2 className='text-5xl font-black text-slate-300 pb-5'>My 3D Modeling Portfolio</h2>
-                            <p className='text-3xl font-normal'>Lore ipsum lore ipsum Lore ipsum lore ipsum Lore ipsum lore ipsum Lore ipsum lore ipsum Lore ipsum lore ipsum Lore ipsum lore ipsum Lore ipsum lore ipsum.</p>
+                            <p className='text-3xl font-normal'>You can check out my 3D preview here: I worked on vehicles, buildings, weapons, assets, products, characters I have models in sci-fi, fantasy, historical genres.</p>
                         </article>
                         <div className='w-full h-2/4 flex gap-x-10'>
                             <WolfCapeMesh/>
