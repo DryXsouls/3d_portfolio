@@ -9,6 +9,8 @@
 
 body {
     font-family: "Work Sans", sans-serif;
+    background: rgb(43,32,37);
+    background: radial-gradient(circle, rgba(43,32,37,1) 0%, rgba(122,160,228,1) 73%, rgba(6,6,6,1) 100%);
 }
 
 body:has(.card[data-color="blue"]:hover) {

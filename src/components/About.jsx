@@ -12,7 +12,7 @@ function About(){
                     </figure>
                     <div className='w-2/4 h-1/4 flex flex-col'>
                         <div className='flex-col w-full h-2/4 z-10 pt-10 space-y-3 space drop-shadow p-20'>
-                            <h5 className='text-2xl text-blue-600 font-bold'>About me</h5>
+                            <h5 className='text-2xl text-white font-bold'>About me</h5>
                             <h1 className='text-5xl font-black'>Junior developer from Slovakia</h1>
                             <p className='text-justify text-2xl font-normal pb-20 '>
                                 As a junior front-end developer I posses skills in HTML, CSS, JavaScript, React.

@@ -7,7 +7,7 @@ function Footer(){
                 <p className='text-2xl text-white'>Copyright ©2024 Designed by Matúš Vytykáč</p>
             </div>
             <a href='#hero'  className='w-32 h-32 text-center content-center'>
-                <p className='text-4xl text-white'>↑</p>
+                <p className='text-4xl text-white hover:text-blue-500'>↑</p>
             </a>
         </section>
     );

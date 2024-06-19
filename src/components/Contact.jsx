@@ -13,7 +13,7 @@ function Contact(){
                         <ContactTelephoneMesh/>
                     </figure>
                     <div className='flex-col w-2/4 h-full z-10 pt-10 space-y-1 space w-screen drop-shadow'>
-                        <h5 className='text-2xl text-blue-600 font-bold'>Contact me</h5>
+                        <h5 className='text-2xl text-white font-bold'>Contact me</h5>
                         <h1 className='text-5xl font-black'>You can get in touch with me through:</h1>
                         <div className='flex flex-col w-full h-full content-center text-center'>
 
