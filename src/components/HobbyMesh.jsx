@@ -172,7 +172,7 @@ import Car from "./models/hobby/CarHobby.jsx";
                 meshPosition2 = [-3,0.25,0];
                 meshPosition3 = [0,0.25,0];
                 meshPosition4 = [3,0.25,0];
-                meshPosition5 = [6.5,0.25,0];
+                meshPosition5 = [6.5,-0.4,0];
                 //Hobby position
                 hMeshPosition1 = [-6.5,-2.5,-0.25];
                 hMeshPosition2 = [-2,-2.5,0];
