@@ -16,8 +16,12 @@ const ContactMesh = (modelName) => {
         let screenPosition2 = [0, -6.5, -43];
 
         let rotation = [0.25,0.25,0];
-
-        if (window.innerWidth <= 1024) {
+        if (window.innerWidth <= 1000) {
+            screenScale = [0.14, 0.15, 0.14];
+            screenPosition = [0,1,-1];
+            screenScale2 = [0.45, 0.45, 0.45];
+            screenPosition2 = [0,-1,-1];
+        } else if (window.innerWidth <= 1024) {
             screenScale = [0.13, 0.15, 0.13];
             screenScale2 = [0.45, 0.45, 0.45];
             screenPosition = [0,1,-1];

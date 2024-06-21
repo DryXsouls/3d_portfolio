@@ -5,33 +5,31 @@ import HeroSkillMesh from "./HeroSkillMesh.jsx";
 
 function Hero(){
     return(
-        <section className='p-2 w-screen h-fit lg:h-screen lg:p-20' id='hero'>
-                <div className='overflow-hidden'>
-                    <div className='flex flex-col-reverse w-full h-screen pt-20 lg:flex-row'>
-                        <div className='flex flex-col w-full h-fit lg:w-2/4 lg:h-2/4'>
-                            <div className='flex-col w-full h-2/4 p-2 pt-10 space-y-3 space drop-shadow lg:2/4 lg:p-20'>
-                                <h1 className='text-5xl font-black text-white  pb-5 lg:whitespace-nowrap'>Front-end React Developer</h1>
-                                <p className='text-2xl'>Hello there traveler I'm Matúš Vytykáč aspiring Front-end developer from Slovakia.</p>
-                                <p className='text-2xl'>I also dabble in 3D designs sorcery</p>
-                                <Link to='https://www.linkedin.com/in/mat%C3%BA%C5%A1-vytyk%C3%A1%C4%8D-03b001212/'>
-                                    <i className='fa fa-linkedin-square text-2xl'/>
-                                </Link>
-                                <Link to='https://www.linkedin.com/in/mat%C3%BA%C5%A1-vytyk%C3%A1%C4%8D-03b001212/'>
-                                    <i className='fa fa-github-square text-2xl'/>
-                                </Link>
-                            </div>
-                            <div className='w-full h-2/4 lg:pt-20 lg:h-2/4'>
-                                <HeroSkillMesh/>
-                            </div>
-                        </div>
-
-
-                        <figure className='w-full h-full lg:w-2/4 lg:h-1/4' >
-                            <HeroMesh/>
-                        </figure>
-                    </div>
+        <section className='flex flex-col-reverse w-full p-2 gap-x-2 lg:flex-row w-full h-fit md:p-5 lg:p-20 lg:mt-40' id='about'>
+            <div className='w-full h-fit flex flex-col lg:w-2/4 lg:h-2/4'>
+                <article className='relative flex-col w-full h-2/4 -top-20 space-y-3 space drop-shadow lg:p-10 lg:p-20'>
+                    <h1 className='text-5xl text-white lg:text-5xl font-black'>Front-end React Developer</h1>
+                    <p className='text-justify text-2xl font-normal lg:text-2xl'>
+                        Hello there traveler I'm Matúš Vytykáč aspiring Front-end developer from Slovakia.</p>
+                    <p className='text-2xl'>I also dabble in 3D designs sorcery</p>
+                    <Link to='https://www.linkedin.com/in/mat%C3%BA%C5%A1-vytyk%C3%A1%C4%8D-03b001212/'>
+                        <i className='fa fa-linkedin-square text-2xl'/>
+                    </Link>
+                    <Link to='https://www.linkedin.com/in/mat%C3%BA%C5%A1-vytyk%C3%A1%C4%8D-03b001212/'>
+                        <i className='fa fa-github-square text-2xl'/>
+                    </Link>
+                </article>
+                <div className='relative -top-56 w-full h-64 lg:-top-60 xl: xl:-top-80 2xl:-top-80 lg:h-96'>
+                    <HeroSkillMesh/>
                 </div>
+            </div>
+
+            <figure className='relative w-full h-96 -top-80 drop-shadow lg:w-2/4'>
+                <HeroMesh/>
+           </figure>
         </section>
+
+
     );
 }
 export default Hero;

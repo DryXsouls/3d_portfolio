@@ -11,21 +11,30 @@ const HeroMesh = () => {
         let screenPosition = [0, -6.5, -43];
         let rotation = [0.25, 5.8, 0];
 
-        if (window.innerWidth <= 1024) {
+        if (window.innerWidth <= 1020) {
             screenScale = [0.28, 0.28, 0.28];
             screenPosition = [0, -1, -0.5];
-        } else if (window.innerWidth <= 1280) {
-            screenScale = [0.37, 0.37, 0.37];
-            screenPosition = [0, -1, -0.5];
-        } else if (window.innerWidth <= 1366) {
+        } else if (window.innerWidth < 1064) {
+            screenScale = [0.35, 0.35, 0.35];
+            screenPosition = [0, 0, -0.5];
+        } else if (window.innerWidth <= 1152) {
             screenScale = [0.4, 0.4, 0.4];
             screenPosition = [0, -1, -0.5];
-        } else if (window.innerWidth <= 1600) {
-            screenScale = [0.45, 0.45, 0.45];
+        } else if (window.innerWidth <= 1280) {
+            screenScale = [0.42, 0.42, 0.42];
             screenPosition = [0, -1, -0.5];
-        } else {
+        } else if (window.innerWidth <= 1366) {
+            screenScale = [0.46, 0.46, 0.46];
+            screenPosition = [0, -1, -0.5];
+        } else if (window.innerWidth <= 1480) {
+            screenScale = [0.48, 0.48, 0.48];
+            screenPosition = [0, 0, -0.5];
+        } else if (window.innerWidth <= 1680) {
+            screenScale = [0.48, 0.48, 0.48];
+            screenPosition = [0, -1, -0.5];
+        }  else {
             screenScale = [1, 1, 1];
-            screenPosition = [0, 0, -5];
+            screenPosition = [0, 0, -6];
         }
 
         return [screenScale, screenPosition, rotation];

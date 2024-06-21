@@ -53,6 +53,7 @@ const HeroSkillMesh = () => {
             gMeshPosition3 = [0.255,2,0];
             gMeshPosition4 = [0.75,2,0];
         } else if (window.innerWidth <= 1280) {
+             screenPosition = [0,1,-1.5];
             screenScale = [0.4, 0.4, 0.4];
             screenScale2 = [0.1,0.1,0.1];
             //Program skill position
@@ -69,20 +70,21 @@ const HeroSkillMesh = () => {
             gMeshPosition4 = [0.9,2,0];
 
         } else if (window.innerWidth <= 1366) {
+            screenPosition = [0,0.5,-1.5];
             screenScale = [0.4, 0.4, 0.4];
             screenScale2 = [0.1,0.1,0.1];
             //Program skill position
-            meshPosition1 = [-1.5,1.25,0];
-            meshPosition2 = [-0.9,1.25,0];
-            meshPosition3 = [-0.3,1.25,0];
-            meshPosition4 = [0.3,1.25,0];
-            meshPosition5 = [0.9,1.25,0];
-            meshPosition6 = [1.5,1.25,0];
+            meshPosition1 = [-1.5,0.75,0];
+            meshPosition2 = [-0.9,0.75,0];
+            meshPosition3 = [-0.3,0.75,0];
+            meshPosition4 = [0.3,0.75,0];
+            meshPosition5 = [0.9,0.75,0];
+            meshPosition6 = [1.5,0.75,0];
             //Graphic skill position
-            gMeshPosition1 = [-0.9,2,0];
-            gMeshPosition2 = [-0.3,2,0];
-            gMeshPosition3 = [0.3,2,0];
-            gMeshPosition4 = [0.9,2,0];
+            gMeshPosition1 = [-0.9,1.5,0];
+            gMeshPosition2 = [-0.3,1.5,0];
+            gMeshPosition3 = [0.3,1.5,0];
+            gMeshPosition4 = [0.9,1.5,0];
 
         } else if (window.innerWidth <= 1600) {
             screenScale = [0.4, 0.4, 0.4];

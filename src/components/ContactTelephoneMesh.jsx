@@ -12,7 +12,12 @@ const ContactTelephoneMesh = (modelName) => {
         let screenPosition = [0, -6.5, -43];
         let rotation = [0.25,5.2,0];
 
-        if (window.innerWidth <= 1024) {
+
+        if (window.innerWidth <= 1000) {
+            screenScale = [1.75, 1.75, 1.75];
+            screenPosition = [0, 0, -0.5];
+
+        } else if (window.innerWidth <= 1024) {
             screenScale = [0.9, 0.9, 0.9];
             screenPosition = [0, 0, 0];
         } else if (window.innerWidth <= 1280) {

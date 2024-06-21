@@ -4,11 +4,13 @@ import WolfCapePage from './assets/WolfCape_Page.png';
 import DriftMotionPage from './assets/DriftSlideMotion.png';
 import PortfolioPage from './assets/PortfolioPage.png';
 import WolfCapeMesh from "./WolfCapeMesh.jsx";
+import PortfolioMesh from "./PortfolioMesh.jsx";
+import DriftMesh from "./DriftMesh.jsx";
 
 
 function Portfolio(){
     return(
-        <section className='p-2 w-full h-fit lg:p-20 lg:mt-40' id='portfolio'>
+        <section className='p-2 w-full h-fit lg:p-20' id='portfolio'>
             <article className='w-full h-2/4 pb-10 overflow-hidden'>
                 <h5 className='font-bold text-white text-3xl'>Portfolio</h5>
                 <h1 className='font-black text-5xl lg:text-6xl'>Each project is unique and designed for business in mind</h1>
@@ -45,7 +47,7 @@ function Portfolio(){
                             <p className='text-3xl font-normal'>Lore ipsum lore ipsum Lore ipsum lore ipsumLore ipsum lore ipsum Lore ipsum lore ipsumLore ipsum lore ipsum Lore ipsum lore ipsum</p>
                         </article>
                         <div className='w-full h-2/4'>
-                            <WolfCapeMesh/>
+                            <DriftMesh/>
                         </div>
 
                     </div>
@@ -63,7 +65,7 @@ function Portfolio(){
                             <p className='text-3xl font-normal'>You can check out my 3D preview here: I worked on vehicles, buildings, weapons, assets, products, characters I have models in sci-fi, fantasy, historical genres.</p>
                         </article>
                         <div className='w-full h-2/4 flex gap-x-10'>
-                            <WolfCapeMesh/>
+                            <PortfolioMesh/>
                         </div>
                     </div>
                 </article>
