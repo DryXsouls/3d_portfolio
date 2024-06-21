@@ -135,8 +135,8 @@ import Car from "./models/hobby/CarHobby.jsx";
     const [meshScale1, meshPosition, meshRotation1, meshScale2, meshScale3, meshScale4, meshRotation2, meshRotation3, likePosition1, likePosition2, likePosition3, likePosition4, likePosition5, hobbyPosition1, hobbyPosition2, hobbyPosition3, hobbyPosition4] = adjustMeshForScreenSize();
 
     return(
-        <section className='w-half h-screen relative '>
-            <Canvas className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
+        <section className='w-half h-screen  relative lg:h-screen'>
+            <Canvas className={`w-full h-screen lg:h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
                     camera={{near:0.1, far:1000}}
             >
                 <Suspense fallback={<Loader/>}>
