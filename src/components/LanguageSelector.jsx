@@ -2,8 +2,8 @@ import React from "react";
 import {useTranslation} from "react-i18next";
 
 const languages = [
-    {code:"en", lang:"English"},
-    {code:"sk", lang:"Slovak"},
+    {code:"en", lang:"En"},
+    {code:"sk", lang:"Sk"},
     ];
 
 const LanguageSelector = () => {
