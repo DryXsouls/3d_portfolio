@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
-
+import LanguageSelector from "./LanguageSelector.jsx"
+import {useTranslation} from "react-i18next";
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -12,12 +13,15 @@ function Navbar() {
         setIsMenuOpen(false);
     };
 
+    const{t}=useTranslation();
+
     return (
         <nav className="bg-zinc-900 dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-800 dark:border-gray-600 items-center">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                     <span className="self-center text-2xl text-white font-semibold whitespace-nowrap dark:text-white">Matúš Vytykáč</span>
                 </a>
+                <LanguageSelector/>
                 <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                     <button
                         id="menu-button"
@@ -55,21 +59,21 @@ function Navbar() {
                                 href="#about"
                                 className="block py-2 px-3 text-white rounded hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                                 onClick={closeMobileMenu}
-                            >About</a>
+                            >{t("aboutHeadline")}</a>
                         </li>
                         <li>
                             <a
                                 href="#portfolio"
                                 className="block py-2 px-3 text-white rounded hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                                 onClick={closeMobileMenu}
-                            >Portfolio</a>
+                            >{t("portfolioHeadline")}</a>
                         </li>
                         <li>
                             <a
                                 href="#contact"
                                 className="block py-2 px-3 text-white rounded hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                                 onClick={closeMobileMenu}
-                            >Contact</a>
+                            >{t("contactHeadline")}</a>
                         </li>
                     </ul>
                 </div>

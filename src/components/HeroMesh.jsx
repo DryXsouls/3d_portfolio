@@ -1,7 +1,7 @@
 import {Canvas} from '@react-three/fiber'
 import {useState, Suspense, useEffect} from "react";
 import Loader from "./Loader.jsx";
-import NissanGTR from "./models/NissanGTR.jsx";
+import NissanGTR from "./models/hobby/CarHobby.jsx";
 
 const HeroMesh = () => {
     const [isRotating, setIsRotating] = useState(false);

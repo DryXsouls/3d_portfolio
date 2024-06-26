@@ -3,9 +3,10 @@ import {Link} from "react-router-dom";
 import ContactMesh from "./ContactMesh.jsx";
 import LinkedInMesh from "./LinkedInMesh.jsx";
 import ContactTelephoneMesh from "./ContactTelephoneMesh.jsx";
-
+import {useTranslation} from "react-i18next";
 
 function Contact(){
+    const {t} = useTranslation();
     return(
         <section className='p-2 md:p-5 lg:p-20 w-full h-fit' id='contact'>
                 <article className='flex flex-col w-full h-fit overflow-hidden lg:flex-row'>
@@ -15,8 +16,8 @@ function Contact(){
                         </div>
                     </figure>
                     <div className='relative flex-col w-full h-fit pt-10 space-y-1 space lg:w-2/4 drop-shadow'>
-                        <h5 className='text-2xl text-white font-bold'>Contact me</h5>
-                        <h1 className='text-5xl font-black'>You can get in touch with me through:</h1>
+                        <h5 className='text-2xl text-white font-bold'>{t("contactHeadline")}</h5>
+                        <h1 className='text-5xl font-black'>{t("contact")}</h1>
                         <div className='flex flex-col w-full h-full content-center text-center'>
 
                             <Link className='w-32 h-32 mt-10 rounded-md self-center shadow-lg shadow-black hover:bg-black' to='https://www.linkedin.com/in/mat%C3%BA%C5%A1-vytyk%C3%A1%C4%8D-03b001212/'>
